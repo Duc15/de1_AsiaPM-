@@ -30,16 +30,15 @@ MODEL_DANG_KIEM_THU = "tesseract"   # đổi ở đây, không đổi trong feat
 
 
 @given("kết quả đo mới nhất của model đang kiểm thử")
-def _nap(tg: TheGioi):
+def _nap(tg: TheGioi, da_co_ket_qua_do):
     tg.dat("diem", doc_cham_diem(MODEL_DANG_KIEM_THU))
     tg.dat("cong", doc_cau_hinh()["cong_chat_luong"])
 
 
 @given("kết quả đo của model đối chứng luôn từ chối")
-def _nap_doi_chung(tg: TheGioi):
-    thu_muc = GOC / "ket_qua" / "luon_tu_choi"
-    if not (thu_muc / "cham_diem.json").exists():
-        pytest.skip("chưa chạy `python scripts/do_luong.py --model luon_tu_choi`")
+def _nap_doi_chung(tg: TheGioi, da_co_ket_qua_doi_chung):
+    if da_co_ket_qua_doi_chung is None:
+        pytest.skip("không dựng được kết quả model đối chứng")
     tg.dat("doi_chung", doc_cham_diem("luon_tu_choi"))
 
 

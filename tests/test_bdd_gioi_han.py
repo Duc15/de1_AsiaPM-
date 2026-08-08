@@ -57,7 +57,7 @@ def _nap_so(tg: TheGioi):
 
 
 @given("kết quả đo mới nhất đã có")
-def _nap_diem(tg: TheGioi):
+def _nap_diem(tg: TheGioi, da_co_ket_qua_do):
     tg.dat("diem", doc_cham_diem())
 
 
