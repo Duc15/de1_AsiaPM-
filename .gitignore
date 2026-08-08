@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Kết quả từng lượt chạy: sinh lại được bằng một lệnh, không commit.
+ket_qua/*/
+
+# NHƯNG baseline thì PHẢI commit — nó là mốc để biết chất lượng có tụt không.
+!ket_qua/baseline.json
+
+# BAO-CAO.pdf CÓ commit: đó là bản nộp thật, và là thứ tiêu chí "≤ 2 trang" áp lên.
+# Sinh lại: python scripts/xuat_bao_cao_pdf.py
+
+# data/anh/ CÓ commit: bộ ảnh là một phần bài nộp, và cần cố định để so sánh
+# giữa các model. Tổng ~2 MB.
+
+# JUnit XML sinh mỗi lần chạy CI, không commit
+ket_qua/*.xml

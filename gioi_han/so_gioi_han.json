@@ -1,0 +1,167 @@
+{
+  "_ghi_chu": [
+    "SỔ GIỚI HẠN — máy đọc được. Đây là câu trả lời cho mục 'ĐIỀU CHÚNG TÔI QUAN TÂM NHẤT'",
+    "của đề: 'bạn có biết phép đo của chính mình không chứng minh được điều gì không?'.",
+    "",
+    "Đề không hỏi accuracy. Đề hỏi tôi có biết giới hạn của chính mình không. Nên giới hạn",
+    "ở đây KHÔNG nằm dưới dạng một đoạn văn cuối báo cáo — chỗ dễ viết cho có rồi quên.",
+    "Nó là dữ liệu, và features/03-gioi-han-phep-do.feature canh nó:",
+    "",
+    "  - mỗi chỉ số công bố phải được ÍT NHẤT một giới hạn phủ; công bố chỉ số mới mà",
+    "    quên khai giới hạn thì bộ test ĐỎ",
+    "  - mỗi giới hạn phải nói rõ nó chặn kết luận nào, và CẦN BẰNG CHỨNG GÌ để gỡ",
+    "  - giới hạn đã gỡ phải dẫn được bằng chứng đã gỡ nó",
+    "",
+    "muc_do: chan_ket_luan  = con số không dùng để kết luận việc đó được",
+    "        thu_hep        = con số vẫn dùng được nhưng hẹp hơn người đọc tưởng",
+    "        canh_bao       = dùng được, nhưng có bẫy khi diễn giải"
+  ],
+  "gioi_han": [
+    {
+      "ma": "GH-01",
+      "tieu_de": "Giấy tờ là mô phỏng, không phải giấy tờ thật",
+      "muc_do": "chan_ket_luan",
+      "chan_cac_chi_so": [
+        "diem_tin_cay",
+        "accuracy_truong_doc_duoc",
+        "accuracy_truong_nghiem_trong",
+        "ty_le_day_ve_oan"
+      ],
+      "khong_chung_minh_duoc": "41,9 % KHÔNG phải độ chính xác của model trên CCCD thật. Bố cục do tôi vẽ, phông Arial, hoa văn nền là các đường chéo; CCCD thật có hoa văn bảo an, mực in khác, thẻ ép plastic phản sáng khác. Con số chỉ dùng để SO SÁNH các model trên cùng bộ ảnh này.",
+      "bang_chung_de_go": "≥ 100 ảnh CCCD thật đã che dữ liệu cá nhân, có thoả thuận xử lý dữ liệu; đo lại và kiểm tương quan thứ hạng giữa hai bộ. Nếu thứ hạng model giữ nguyên thì bộ mô phỏng dùng được để so sánh; nếu đảo thứ hạng thì bộ này bỏ.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Ban QLDA đọc 41,9 % rồi đặt kỳ vọng vận hành trên nó, và thực tế lệch không biết bao nhiêu về phía nào."
+    },
+    {
+      "ma": "GH-02",
+      "tieu_de": "n = 33 quá nhỏ để kết luận theo từng trường",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "accuracy_theo_truong",
+        "accuracy_truong_nghiem_trong"
+      ],
+      "khong_chung_minh_duoc": "cccd.ngay_sinh = 84,6 % dựa trên 13 mẫu — khoảng tin cậy 95 % rộng cỡ ±20 điểm phần trăm. Bảng theo trường chỉ được dùng để CHỌN HƯỚNG ĐIỀU TRA, không được dùng để cam kết SLA hay để xếp hạng trường nào tệ hơn trường nào khi chênh nhau dưới 20 điểm.",
+      "bang_chung_de_go": "≥ 30 ảnh cho mỗi ô (loại giấy tờ × bậc chất lượng) = ≥ 300 ảnh; báo khoảng tin cậy kèm mọi tỉ lệ theo trường.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Đầu tư sửa đúng trường thật ra không phải trường yếu nhất."
+    },
+    {
+      "ma": "GH-03",
+      "tieu_de": "Cái được đo là cụm OCR + bộ tách của tôi, không phải Tesseract",
+      "muc_do": "chan_ket_luan",
+      "chan_cac_chi_so": [
+        "diem_tin_cay",
+        "accuracy_truong_doc_duoc",
+        "so_anh_doc_duoc_chu_nhung_khong_neo_duoc_truong"
+      ],
+      "khong_chung_minh_duoc": "Không kết luận được 'Tesseract kém với tiếng Việt'. Bộ tách trường là của tôi và đã có 7 lỗi bị bắt (BD-01…BD-07); riêng ba lỗi đầu đưa con số từ 32,4 % lên 41,9 %, tức gần một phần tư 'lỗi của model' ban đầu là lỗi của người đo. Không có gì bảo đảm đã hết loại đó.",
+      "bang_chung_de_go": "Cắm ít nhất một cụm trích xuất thứ hai có bộ tách độc lập (ví dụ một VLM trả thẳng JSON, không cần bộ tách của tôi). Nếu thứ hạng giữ nguyên thì phần đóng góp của bộ tách là nhỏ.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Loại oan một model tốt, hoặc chọn model dựa trên chất lượng bộ tách chứ không phải chất lượng model."
+    },
+    {
+      "ma": "GH-04",
+      "tieu_de": "Lượt gán nhãn thứ hai không độc lập hoàn toàn",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "ty_le_khop_hai_luot"
+      ],
+      "khong_chung_minh_duoc": "Đồng thuận 105/105 KHÔNG phải bằng chứng nhãn đúng. Người đọc lại là một mô hình ngôn ngữ, đọc trong cùng phiên đã sinh ảnh, nên phần phiên âm giá trị bị nhiễm. 100 % là CHẶN TRÊN, không phải số đo sạch. Phần đáng tin duy nhất của lượt đó là phán quyết đọc được / không đọc được, vì phán quyết đó không suy ra được từ bản kê.",
+      "bang_chung_de_go": "Hai người thật gán nhãn mù trên cùng bộ ảnh, không thấy bản kê; tính Cohen's kappa. Kappa < 0,8 thì chính bộ nhãn phải làm lại trước khi tin bất kỳ con số nào.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Sai số của nhãn bị tính nhầm thành sai số của model."
+    },
+    {
+      "ma": "GH-05",
+      "tieu_de": "Dấu thanh ở bậc trung bình nằm ở ranh giới đọc được của NGƯỜI",
+      "muc_do": "canh_bao",
+      "chan_cac_chi_so": [
+        "accuracy_truong_nghiem_trong",
+        "so_ro_ri_nghiem_trong"
+      ],
+      "khong_chung_minh_duoc": "Không kết luận được rằng toàn bộ lỗi sai_dau là lỗi của model. Lượt đọc lại ghi nhận: trên 3 ảnh CCCD bậc trung_binh, người đọc được chữ nhưng KHÔNG nhìn rõ dấu ngã / huyền và phải suy từ ngữ cảnh tên phổ biến. Ở bậc đó thông tin dấu có thể đã bị phá huỷ trong ảnh. Giới hạn này KHÔNG áp dụng cho 4/6 ca rò rỉ xảy ra trên ảnh sạch.",
+      "bang_chung_de_go": "Giữ ảnh gốc độ phân giải cao của cùng giấy tờ làm đối chứng; nếu dấu đọc được ở bản gốc mà mất ở bản đã làm xấu, thì đó là mất thông tin do ảnh chứ không phải do model.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Đổ oan cho model, rồi đi thay model trong khi vấn đề nằm ở chất lượng ảnh đầu vào."
+    },
+    {
+      "ma": "GH-06",
+      "tieu_de": "Ngưỡng HITL chọn trên chính bộ ảnh dùng để đo",
+      "muc_do": "canh_bao",
+      "chan_cac_chi_so": [
+        "so_ro_ri_nghiem_trong",
+        "ty_le_tu_dong"
+      ],
+      "khong_chung_minh_duoc": "Khuyến nghị 'ngưỡng ≥ 0,95' được chọn bằng cách quét trên đúng bộ 33 ảnh đã dùng để đo, nên nó tối ưu cục bộ cho bộ này. Không chứng minh được 0,95 vẫn là điểm đúng trên dữ liệu vận hành.",
+      "bang_chung_de_go": "Tách tập chọn ngưỡng và tập đánh giá (hold-out), hoặc chọn ngưỡng trên dữ liệu vận hành thật rồi kiểm lại trên bộ này.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Đặt ngưỡng theo con số đẹp trên giấy, ra vận hành rò rỉ nhiều hơn dự kiến."
+    },
+    {
+      "ma": "GH-07",
+      "tieu_de": "Chữ viết tay là font nghiêng cộng nhiễu hình học, không phải nét viết thật",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "accuracy_mau_01"
+      ],
+      "khong_chung_minh_duoc": "Con số 8–27 % trên Mẫu 01 là CHẶN TRÊN LẠC QUAN. Các font viết tay sẵn có trên Windows thiếu glyph dấu tiếng Việt (đã kiểm bằng fontTools), nên phần 'viết tay' chỉ mô phỏng nét không đều và đường cơ sở gợn — không mô phỏng hình dạng chữ viết tay thật. Chữ viết tay thật gần như chắc chắn còn tệ hơn.",
+      "bang_chung_de_go": "Thu chữ viết tay thật của ≥ 20 người trên biểu Mẫu 01 in sẵn (không chứa dữ liệu cá nhân thật), đo lại.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Kết luận 'không dùng cho Mẫu 01' vẫn đúng, nhưng mức độ tệ bị báo nhẹ hơn thực tế."
+    },
+    {
+      "ma": "GH-08",
+      "tieu_de": "Trạng thái hồ sơ dựa trên một quy ước do tôi tự đặt",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "ty_le_day_ve_oan",
+        "so_ho_so_can_bo_sung"
+      ],
+      "khong_chung_minh_duoc": "44,4 % hồ sơ bị trả về oan phụ thuộc GĐ-7 — quy ước 'khi nào hồ sơ cần bổ sung' do tôi chốt vì đề không định nghĩa. Nếu Ban QLDA cho người duyệt nhập tay trường bắt buộc bị thiếu thì 4/12 ca biến mất và con số tụt còn 29,6 %.",
+      "bang_chung_de_go": "Ban QLDA xác nhận quy tắc nghiệp vụ 'hồ sơ đạt' và 'khi nào trả về cho dân'.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Tranh cãi về con số thay vì tranh luận về quyết định nghiệp vụ đứng sau nó."
+    },
+    {
+      "ma": "GH-09",
+      "tieu_de": "Không đo được chi phí thật của việc hồ sơ bị trả về",
+      "muc_do": "chan_ket_luan",
+      "chan_cac_chi_so": [
+        "ty_le_day_ve_oan"
+      ],
+      "khong_chung_minh_duoc": "Bộ đo đếm được SỐ hồ sơ bị trả về, không đếm được cái giá của nó: người dân đi lại mấy lần, mất mấy buổi làm, bao nhiêu người bỏ cuộc giữa chừng. Nên không kết luận được 'tự động 27 % có đủ hoàn vốn không' — đó là câu hỏi tôi nêu ra chứ không phải câu hỏi tôi trả lời được.",
+      "bang_chung_de_go": "Dữ liệu vận hành: số lượt nộp lại trên mỗi hồ sơ, thời gian xử lý, tỉ lệ bỏ cuộc — lấy sau khi chạy thí điểm.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Quyết định đầu tư dựa trên tỉ lệ tự động hoá, trong khi thứ quyết định hiệu quả là chi phí mỗi lần trả về."
+    },
+    {
+      "ma": "GH-10",
+      "tieu_de": "18/33 ảnh chưa có người đọc lại (GĐ-3)",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "accuracy_truong_doc_duoc",
+        "phan_bo_ky_vong"
+      ],
+      "khong_chung_minh_duoc": "Kỳ vọng hành vi của 18 ảnh bậc sach/nhe/trung_binh do script gán mặc định là 'người đọc được', chưa ai kiểm. Nếu sai thì mẫu số 105 sai theo và accuracy lệch.",
+      "bang_chung_de_go": "Đọc lại nốt 18 ảnh đó bằng mắt và ghi vào doc_lai_doc_lap.csv.",
+      "trang_thai": "da_go",
+      "bang_chung_da_go": "Lượt đọc lại ngày 2026-08-08 đã đọc nốt 18/18 ảnh: tất cả đọc được rõ toàn bộ trường. Nay 33/33 ảnh đều có người đọc lại, đồng thuận 105/105. Giả định được XÁC NHẬN, các con số không đổi. Xem data/nhan/doc_lai_doc_lap.csv và do_dong_thuan.json.",
+      "hau_qua_neu_bo_qua": "(đã gỡ)"
+    },
+    {
+      "ma": "GH-11",
+      "tieu_de": "ECE và AUC đo trên 66 mẫu chia 6 khoảng — vài khoảng chỉ có 3 mẫu",
+      "muc_do": "thu_hep",
+      "chan_cac_chi_so": [
+        "hieu_chuan_conf_ece",
+        "auc_phan_biet_dung_sai",
+        "conf_tb_khi_dung",
+        "conf_tb_khi_sai"
+      ],
+      "khong_chung_minh_duoc": "ECE = 0,183 không phải một số đo ổn định. Nó tính trên 66 trường có cả giá trị lẫn confidence, chia vào 6 khoảng — khoảng [0,00;0,50) chỉ có 3 mẫu và khoảng [0,60;0,70) có 3 mẫu. ECE nhạy với cách chia khoảng và với n nhỏ, nên con số này chỉ đủ để nói 'model tự tin quá mức', KHÔNG đủ để nói quá mức bao nhiêu, và càng không đủ để so ECE giữa hai model chênh nhau dưới ~0,05.",
+      "bang_chung_de_go": "≥ 500 trường có confidence để mỗi khoảng đạt ≥ 50 mẫu; báo kèm khoảng tin cậy bootstrap cho ECE và AUC; kiểm lại ECE với 3 cách chia khoảng khác nhau xem kết luận có đổi không.",
+      "trang_thai": "mo",
+      "hau_qua_neu_bo_qua": "Chọn model theo ECE nhỏ hơn trong khi chênh lệch nằm gọn trong nhiễu, hoặc hiệu chuẩn lại conf dựa trên một đường cong dựng từ 3 điểm."
+    }
+  ]
+}

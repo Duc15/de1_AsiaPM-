@@ -1,0 +1,18 @@
+# Bộ đo. Cố tình mỏng: không cần OpenCV, không cần framework ML.
+pytesseract>=0.3.13
+Pillow>=10.0
+numpy>=1.26
+pytest>=8.0
+
+# Render báo cáo ra PDF A4 để ĐO số trang thật (đề giới hạn 2 trang) — xem
+# bo_do/xuat_pdf.py và tests/test_nop_bai.py. Đếm ký tự rồi đoán số trang là sai:
+# ước lượng của tôi lệch tới 0,5 trang so với số đo.
+reportlab>=4.0
+pypdf>=4.0
+
+# fonttools chỉ dùng một lần, để kiểm tra font có đủ glyph dấu tiếng Việt hay
+# không (Ink Free và Segoe Script trên Windows thì KHÔNG đủ). Không cần cho
+# việc chạy bộ đo.
+# fonttools>=4.50
+
+# Ngoài Python còn cần binary Tesseract 5 kèm gói ngôn ngữ `vie` — xem README.

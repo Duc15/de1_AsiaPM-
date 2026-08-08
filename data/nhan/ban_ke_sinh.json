@@ -1,0 +1,841 @@
+{
+  "seed_goc": 20260808,
+  "canh_bao": "Toàn bộ giấy tờ trong bộ này là mô phỏng. Số định danh dùng tiền tố 000 (không phải mã tỉnh hợp lệ) nên không thể trùng số của người thật. Không có ảnh giấy tờ thật nào được dùng.",
+  "so_anh": 33,
+  "anh": [
+    {
+      "id": "cccd_sach_01",
+      "tep": "data/anh/cccd_sach_01.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "sach",
+      "seed": 20261785,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000301001234",
+        "ho_ten": "TRẦN THỊ MAI",
+        "ngay_sinh": "01/03/1990",
+        "noi_thuong_tru": "Số 12 Đường Lê Duẩn, Phường Tân Mai, Quận Hoàng Mai, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_sach_02",
+      "tep": "data/anh/cccd_sach_02.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "sach",
+      "seed": 20262762,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000185004567",
+        "ho_ten": "NGUYỄN VĂN HÙNG",
+        "ngay_sinh": "17/11/1985",
+        "noi_thuong_tru": "Thôn Đoài, Xã Nguyên Khê, Huyện Đông Anh, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_sach_03",
+      "tep": "data/anh/cccd_sach_03.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "sach",
+      "seed": 20263739,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000492007781",
+        "ho_ten": "LÊ THỊ NGỌC HUYỀN",
+        "ngay_sinh": "23/07/1992",
+        "noi_thuong_tru": "Số 45/7 Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Thành phố Hồ Chí Minh"
+      }
+    },
+    {
+      "id": "cccd_sach_04",
+      "tep": "data/anh/cccd_sach_04.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "sach",
+      "seed": 20264716,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000278003094",
+        "ho_ten": "PHẠM ĐỨC THẮNG",
+        "ngay_sinh": "09/02/1978",
+        "noi_thuong_tru": "Số 8 Ngõ 32 Đường Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_nhe_01",
+      "tep": "data/anh/cccd_nhe_01.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nhe",
+      "seed": 20265693,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000395006612",
+        "ho_ten": "VÕ THỊ KIM LOAN",
+        "ngay_sinh": "30/09/1995",
+        "noi_thuong_tru": "Tổ 4 Khu phố 2, Phường Long Bình, Thành phố Biên Hòa, Tỉnh Đồng Nai"
+      }
+    },
+    {
+      "id": "cccd_nhe_02",
+      "tep": "data/anh/cccd_nhe_02.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nhe",
+      "seed": 20266670,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000188002345",
+        "ho_ten": "HOÀNG MINH TUẤN",
+        "ngay_sinh": "12/05/1988",
+        "noi_thuong_tru": "Số 210 Đường Trần Phú, Phường Máy Tơ, Quận Ngô Quyền, Thành phố Hải Phòng"
+      }
+    },
+    {
+      "id": "cccd_nhe_03",
+      "tep": "data/anh/cccd_nhe_03.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nhe",
+      "seed": 20267647,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000501009923",
+        "ho_ten": "ĐẶNG THỊ THU HÀ",
+        "ngay_sinh": "05/12/2001",
+        "noi_thuong_tru": "Số 17 Đường Hùng Vương, Phường Thắng Lợi, Thành phố Buôn Ma Thuột, Tỉnh Đắk Lắk"
+      }
+    },
+    {
+      "id": "cccd_nhe_04",
+      "tep": "data/anh/cccd_nhe_04.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nhe",
+      "seed": 20268624,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        1050,
+        660
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000283005510",
+        "ho_ten": "BÙI QUỐC ĐẠT",
+        "ngay_sinh": "28/08/1983",
+        "noi_thuong_tru": "Thôn Trung, Xã Tân Ước, Huyện Thanh Oai, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_trung_binh_01",
+      "tep": "data/anh/cccd_trung_binh_01.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20269601,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.60",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        627,
+        394
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000396001178",
+        "ho_ten": "TRƯƠNG THỊ BÍCH PHƯỢNG",
+        "ngay_sinh": "14/04/1996",
+        "noi_thuong_tru": "Số 3 Đường Nguyễn Huệ, Phường Vĩnh Ninh, Thành phố Huế"
+      }
+    },
+    {
+      "id": "cccd_trung_binh_02",
+      "tep": "data/anh/cccd_trung_binh_02.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20270578,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.61",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        640,
+        402
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000301001234",
+        "ho_ten": "TRẦN THỊ MAI",
+        "ngay_sinh": "01/03/1990",
+        "noi_thuong_tru": "Số 12 Đường Lê Duẩn, Phường Tân Mai, Quận Hoàng Mai, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_trung_binh_03",
+      "tep": "data/anh/cccd_trung_binh_03.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20271555,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.56",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        586,
+        368
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000185004567",
+        "ho_ten": "NGUYỄN VĂN HÙNG",
+        "ngay_sinh": "17/11/1985",
+        "noi_thuong_tru": "Thôn Đoài, Xã Nguyên Khê, Huyện Đông Anh, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_trung_binh_04",
+      "tep": "data/anh/cccd_trung_binh_04.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20272532,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.69",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        720,
+        453
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000492007781",
+        "ho_ten": "LÊ THỊ NGỌC HUYỀN",
+        "ngay_sinh": "23/07/1992",
+        "noi_thuong_tru": "Số 45/7 Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Thành phố Hồ Chí Minh"
+      }
+    },
+    {
+      "id": "cccd_nang_01",
+      "tep": "data/anh/cccd_nang_01.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nang",
+      "seed": 20273509,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.40",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        415,
+        261
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000278003094",
+        "ho_ten": "PHẠM ĐỨC THẮNG",
+        "ngay_sinh": "09/02/1978",
+        "noi_thuong_tru": "Số 8 Ngõ 32 Đường Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_nang_02",
+      "tep": "data/anh/cccd_nang_02.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nang",
+      "seed": 20274486,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.40",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        416,
+        262
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000395006612",
+        "ho_ten": "VÕ THỊ KIM LOAN",
+        "ngay_sinh": "30/09/1995",
+        "noi_thuong_tru": "Tổ 4 Khu phố 2, Phường Long Bình, Thành phố Biên Hòa, Tỉnh Đồng Nai"
+      }
+    },
+    {
+      "id": "cccd_nang_03",
+      "tep": "data/anh/cccd_nang_03.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "nang",
+      "seed": 20275463,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.38",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        399,
+        250
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000188002345",
+        "ho_ten": "HOÀNG MINH TUẤN",
+        "ngay_sinh": "12/05/1988",
+        "noi_thuong_tru": "Số 210 Đường Trần Phú, Phường Máy Tơ, Quận Ngô Quyền, Thành phố Hải Phòng"
+      }
+    },
+    {
+      "id": "cccd_khong_doc_duoc_01",
+      "tep": "data/anh/cccd_khong_doc_duoc_01.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20276440,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.18",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        189,
+        119
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000501009923",
+        "ho_ten": "ĐẶNG THỊ THU HÀ",
+        "ngay_sinh": "05/12/2001",
+        "noi_thuong_tru": "Số 17 Đường Hùng Vương, Phường Thắng Lợi, Thành phố Buôn Ma Thuột, Tỉnh Đắk Lắk"
+      }
+    },
+    {
+      "id": "cccd_khong_doc_duoc_02",
+      "tep": "data/anh/cccd_khong_doc_duoc_02.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20277417,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.24",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        249,
+        156
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000283005510",
+        "ho_ten": "BÙI QUỐC ĐẠT",
+        "ngay_sinh": "28/08/1983",
+        "noi_thuong_tru": "Thôn Trung, Xã Tân Ước, Huyện Thanh Oai, Thành phố Hà Nội"
+      }
+    },
+    {
+      "id": "cccd_khong_doc_duoc_03",
+      "tep": "data/anh/cccd_khong_doc_duoc_03.jpg",
+      "doc_type": "cccd",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20278394,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.19",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        197,
+        124
+      ],
+      "noi_dung_da_ve": {
+        "so_dinh_danh": "000396001178",
+        "ho_ten": "TRƯƠNG THỊ BÍCH PHƯỢNG",
+        "ngay_sinh": "14/04/1996",
+        "noi_thuong_tru": "Số 3 Đường Nguyễn Huệ, Phường Vĩnh Ninh, Thành phố Huế"
+      }
+    },
+    {
+      "id": "mau_01_sach_01",
+      "tep": "data/anh/mau_01_sach_01.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "sach",
+      "seed": 20279371,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "LÊ THỊ NGỌC HUYỀN",
+        "hinh_thuc": "thuê mua",
+        "dien_tich_binh_quan": "12 m²",
+        "thu_nhap_hang_thang": "11.000.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_sach_02",
+      "tep": "data/anh/mau_01_sach_02.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "sach",
+      "seed": 20280348,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "PHẠM ĐỨC THẮNG",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "7 m²",
+        "thu_nhap_hang_thang": "4.800.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_sach_03",
+      "tep": "data/anh/mau_01_sach_03.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "sach",
+      "seed": 20281325,
+      "bien_dang": [
+        "nghieng<1do",
+        "jpeg92"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "VÕ THỊ KIM LOAN",
+        "hinh_thuc": "thuê",
+        "dien_tich_binh_quan": "18,5 m²",
+        "thu_nhap_hang_thang": "9.750.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nhe_01",
+      "tep": "data/anh/mau_01_nhe_01.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nhe",
+      "seed": 20282302,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "HOÀNG MINH TUẤN",
+        "hinh_thuc": "thuê mua",
+        "dien_tich_binh_quan": "10 m²",
+        "thu_nhap_hang_thang": "7.300.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nhe_02",
+      "tep": "data/anh/mau_01_nhe_02.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nhe",
+      "seed": 20283279,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "ĐẶNG THỊ THU HÀ",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "6,5 m²",
+        "thu_nhap_hang_thang": "5.100.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nhe_03",
+      "tep": "data/anh/mau_01_nhe_03.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nhe",
+      "seed": 20284256,
+      "bien_dang": [
+        "nghieng<3do",
+        "nhoe_nhe",
+        "anh_sang_lech_nhe",
+        "nhieu_nhe",
+        "jpeg82"
+      ],
+      "kich_thuoc": [
+        900,
+        1240
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "BÙI QUỐC ĐẠT",
+        "hinh_thuc": "thuê",
+        "dien_tich_binh_quan": "22 m²",
+        "thu_nhap_hang_thang": "13.400.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_trung_binh_01",
+      "tep": "data/anh/mau_01_trung_binh_01.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20285233,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.61",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        549,
+        757
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "TRẦN THỊ MAI",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "15 m²",
+        "thu_nhap_hang_thang": "8.500.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_trung_binh_02",
+      "tep": "data/anh/mau_01_trung_binh_02.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20286210,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.67",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        604,
+        832
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "NGUYỄN VĂN HÙNG",
+        "hinh_thuc": "thuê",
+        "dien_tich_binh_quan": "9,5 m²",
+        "thu_nhap_hang_thang": "6.200.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_trung_binh_03",
+      "tep": "data/anh/mau_01_trung_binh_03.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "trung_binh",
+      "seed": 20287187,
+      "bien_dang": [
+        "phoi_canh",
+        "nhoe_tieu_cu",
+        "anh_sang_lech",
+        "loa_den",
+        "lech_mau_huynh_quang",
+        "nhieu_trung_binh",
+        "giam_phan_giai_x0.62",
+        "jpeg62"
+      ],
+      "kich_thuoc": [
+        559,
+        770
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "LÊ THỊ NGỌC HUYỀN",
+        "hinh_thuc": "thuê mua",
+        "dien_tich_binh_quan": "12 m²",
+        "thu_nhap_hang_thang": "11.000.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nang_01",
+      "tep": "data/anh/mau_01_nang_01.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nang",
+      "seed": 20288164,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.44",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        399,
+        550
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "PHẠM ĐỨC THẮNG",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "7 m²",
+        "thu_nhap_hang_thang": "4.800.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nang_02",
+      "tep": "data/anh/mau_01_nang_02.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nang",
+      "seed": 20289141,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.42",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        376,
+        518
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "VÕ THỊ KIM LOAN",
+        "hinh_thuc": "thuê",
+        "dien_tich_binh_quan": "18,5 m²",
+        "thu_nhap_hang_thang": "9.750.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_nang_03",
+      "tep": "data/anh/mau_01_nang_03.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "nang",
+      "seed": 20290118,
+      "bien_dang": [
+        "phoi_canh_manh",
+        "dau_giap_lai_de_len_chu",
+        "nhoe_tay_run",
+        "nhoe_tieu_cu",
+        "loa_den_manh",
+        "thieu_sang",
+        "nhieu_manh",
+        "giam_phan_giai_x0.38",
+        "jpeg38"
+      ],
+      "kich_thuoc": [
+        345,
+        475
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "HOÀNG MINH TUẤN",
+        "hinh_thuc": "thuê mua",
+        "dien_tich_binh_quan": "10 m²",
+        "thu_nhap_hang_thang": "7.300.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_khong_doc_duoc_01",
+      "tep": "data/anh/mau_01_khong_doc_duoc_01.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20291095,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.21",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        189,
+        261
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "ĐẶNG THỊ THU HÀ",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "6,5 m²",
+        "thu_nhap_hang_thang": "5.100.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_khong_doc_duoc_02",
+      "tep": "data/anh/mau_01_khong_doc_duoc_02.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20292072,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.20",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        183,
+        253
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "BÙI QUỐC ĐẠT",
+        "hinh_thuc": "thuê",
+        "dien_tich_binh_quan": "22 m²",
+        "thu_nhap_hang_thang": "13.400.000 đồng"
+      }
+    },
+    {
+      "id": "mau_01_khong_doc_duoc_03",
+      "tep": "data/anh/mau_01_khong_doc_duoc_03.jpg",
+      "doc_type": "mau_01",
+      "muc_chat_luong": "khong_doc_duoc",
+      "seed": 20293049,
+      "bien_dang": [
+        "phoi_canh_rat_manh",
+        "nhoe_tay_run_rat_manh",
+        "mat_net_hoan_toan",
+        "loa_chay_sang",
+        "gan_nhu_toi",
+        "nhieu_rat_manh",
+        "giam_phan_giai_x0.23",
+        "jpeg22"
+      ],
+      "kich_thuoc": [
+        207,
+        285
+      ],
+      "noi_dung_da_ve": {
+        "ho_ten_nguoi_viet_don": "TRẦN THỊ MAI",
+        "hinh_thuc": "mua",
+        "dien_tich_binh_quan": "15 m²",
+        "thu_nhap_hang_thang": "8.500.000 đồng"
+      }
+    }
+  ]
+}

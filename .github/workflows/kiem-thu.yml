@@ -1,0 +1,71 @@
+name: Kiểm thử mô hình trích xuất
+
+# Bộ đo phải chạy được ở nơi khác máy của người viết nó, nếu không thì tháng sau
+# đổi model sẽ không ai chạy lại được.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  kiem-thu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cài Tesseract kèm gói tiếng Việt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-vie fonts-dejavu-core
+          tesseract --version
+          tesseract --list-langs
+
+      - name: Cài thư viện Python
+        run: pip install -r requirements.txt
+
+      # Nhanh (~1 giây), không cần OCR. Hỏng ở đây thì mọi số đo phía sau vô nghĩa,
+      # nên chạy trước và fail nhanh.
+      - name: Kiểm thước đo — luật so khớp Bước 1
+        run: pytest tests/test_luat_so_khop.py -o addopts= -q --junitxml=ket_qua/junit-luat.xml
+
+      - name: Kiểm adapter và đường lỗi
+        run: pytest tests/test_bo_tach.py -o addopts= -q --junitxml=ket_qua/junit-adapter.xml
+
+      - name: Kiểm thử theo đặc tả (AC1/AC2/AC3)
+        run: pytest tests/test_dac_ta_ac.py -o addopts= -q --junitxml=ket_qua/junit-ac.xml
+
+      - name: Đo và xuất báo cáo
+        run: |
+          python scripts/do_luong.py
+          python scripts/xuat_ho_so_kiem_thu.py
+
+      # Cổng nghiệp vụ đang đỏ có chủ ý (model chưa đạt) — ở CI ta canh HỒI QUY,
+      # tức là "có tụt so với baseline không", chứ không canh "đã đủ tốt chưa".
+      - name: Cổng hồi quy
+        run: |
+          pytest tests/test_du_lieu.py -o addopts= -q --junitxml=ket_qua/junit-du-lieu.xml
+          pytest tests/test_hoi_quy.py -o addopts= -q -m "not cong_nghiep_vu" \
+                 --junitxml=ket_qua/junit-hoi-quy.xml
+
+      - name: Cổng nghiệp vụ (báo cáo, không chặn merge)
+        continue-on-error: true
+        run: pytest -o addopts= -q -m cong_nghiep_vu
+
+      - name: Kiểm chính bộ test (mutation) — chỉ chạy khi gọi tay
+        if: github.event_name == 'workflow_dispatch'
+        run: python scripts/kiem_tra_bo_test.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ket-qua-kiem-thu
+          path: |
+            ket_qua/**/*.xml
+            ket_qua/tesseract/bao_cao.md
+            ket_qua/tesseract/truong_hop_kiem_thu.md
+            ket_qua/tesseract/so_bang_chung.json
+            ket_qua/tesseract/nhat_ky_worker.log

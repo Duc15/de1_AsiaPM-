@@ -1,0 +1,157 @@
+# Bước 3 — lượt gán nhãn ĐỘC LẬP thứ hai (annotator #2).
+#
+# Cách làm: mở từng ảnh đã sinh, đọc bằng mắt, ghi lại đọc được gì. Lượt này KHÔNG
+# lấy giá trị từ ban_ke_sinh.json — nó nhìn ảnh.
+# Mục đích: (a) đo độ đồng thuận với nhãn theo cấu tạo, (b) quyết định ảnh/trường nào
+# thật sự không đọc được — vì "không đọc được" là phán quyết của người, không phải
+# của bậc làm xấu ảnh mà script gán.
+#
+# doc_duoc = 1  đọc được, và gia_tri_doc_lai là thứ đọc ra
+# doc_duoc = 0  KHÔNG đọc được (để trống gia_tri_doc_lai)
+#
+# LƯỢT 2 — lấy mẫu 15/33 ảnh, cố ý dồn về phía ảnh xấu: toàn bộ 6 ảnh bậc
+# "khong_doc_duoc", toàn bộ 6 ảnh bậc "nang", 1 ảnh "trung_binh", 2 ảnh "sach".
+#
+# LƯỢT 3 — rà soát, bổ sung nốt 18 ảnh còn lại (bậc sach/nhe/trung_binh) để GỠ giả
+# định GĐ-3. Lý do phải gỡ: chính bậc trung_binh sinh ra 18 ca BO_SOT + 6 ca SAI, nên
+# nếu những ảnh đó thật ra người cũng không đọc nổi thì accuracy nhảy 41,9% -> 50,6%
+# và khẳng định "AC3 bịa 0%" sẽ sập. Kết quả lượt 3: 18/18 ảnh đọc được rõ toàn bộ
+# trường => GĐ-3 ĐƯỢC XÁC NHẬN, mọi con số giữ nguyên. Nay lượt đọc lại phủ 33/33 ảnh.
+#
+# Annotator #2 là một mô hình ngôn ngữ (Claude Opus 5) đọc ảnh trong cùng phiên làm
+# việc đã sinh ra ảnh. Giới hạn phải nói rõ: nó KHÔNG độc lập hoàn toàn về phần
+# phiên âm giá trị. Sản phẩm đáng tin của lượt này là cột doc_duoc.
+id,ten_truong,doc_duoc,gia_tri_doc_lai,ghi_chu
+cccd_sach_01,so_dinh_danh,1,000301001234,ro net
+cccd_sach_01,ho_ten,1,TRẦN THỊ MAI,ro net
+cccd_sach_01,ngay_sinh,1,01/03/1990,ro net
+cccd_sach_01,noi_thuong_tru,1,"Số 12 Đường Lê Duẩn, Phường Tân Mai, Quận Hoàng Mai, Thành phố Hà Nội",ngat 2 dong
+mau_01_sach_01,ho_ten_nguoi_viet_don,1,LÊ THỊ NGỌC HUYỀN,chu viet tay ro
+mau_01_sach_01,hinh_thuc,1,thuê mua,o thu 3 co dau tich
+mau_01_sach_01,dien_tich_binh_quan,1,12 m²,
+mau_01_sach_01,thu_nhap_hang_thang,1,11.000.000 đồng,
+cccd_trung_binh_01,so_dinh_danh,1,000396001178,phoi canh + loa nhung con doc duoc
+cccd_trung_binh_01,ho_ten,1,TRƯƠNG THỊ BÍCH PHƯỢNG,
+cccd_trung_binh_01,ngay_sinh,1,14/04/1996,
+cccd_trung_binh_01,noi_thuong_tru,1,"Số 3 Đường Nguyễn Huệ, Phường Vĩnh Ninh, Thành phố Huế",
+cccd_nang_01,so_dinh_danh,1,000278003094,mo nhung doc duoc
+cccd_nang_01,ho_ten,1,PHẠM ĐỨC THẮNG,
+cccd_nang_01,ngay_sinh,0,,dau giap lai de dung len o gia tri - toi khong doc noi
+cccd_nang_01,noi_thuong_tru,1,"Số 8 Ngõ 32 Đường Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội",doc duoc ca 2 dong
+cccd_nang_02,so_dinh_danh,1,000395006612,
+cccd_nang_02,ho_ten,1,VÕ THỊ KIM LOAN,
+cccd_nang_02,ngay_sinh,1,30/09/1995,nam duoi vien dau do nhung con doc duoc
+cccd_nang_02,noi_thuong_tru,1,"Tổ 4 Khu phố 2, Phường Long Bình, Thành phố Biên Hòa, Tỉnh Đồng Nai",
+cccd_nang_03,so_dinh_danh,1,000188002345,doc duoc nhung khong chac chan
+cccd_nang_03,ho_ten,1,HOÀNG MINH TUẤN,
+cccd_nang_03,ngay_sinh,0,,nhoe + thieu sang - khong doc ra chu so nao
+cccd_nang_03,noi_thuong_tru,1,"Số 210 Đường Trần Phú, Phường Máy Tơ, Quận Ngô Quyền, Thành phố Hải Phòng",rat kho doc
+mau_01_nang_01,ho_ten_nguoi_viet_don,1,PHẠM ĐỨC THẮNG,
+mau_01_nang_01,hinh_thuc,1,mua,o thu 1 co dau tich
+mau_01_nang_01,dien_tich_binh_quan,1,7 m²,
+mau_01_nang_01,thu_nhap_hang_thang,1,4.800.000 đồng,
+mau_01_nang_02,ho_ten_nguoi_viet_don,1,VÕ THỊ KIM LOAN,
+mau_01_nang_02,hinh_thuc,1,thuê,
+mau_01_nang_02,dien_tich_binh_quan,1,18.5 m²,doc ra dau phay hay dau cham thi khong chac
+mau_01_nang_02,thu_nhap_hang_thang,1,9.750.000 đồng,
+mau_01_nang_03,ho_ten_nguoi_viet_don,1,HOÀNG MINH TUẤN,nam duoi dau do
+mau_01_nang_03,hinh_thuc,1,thuê mua,
+mau_01_nang_03,dien_tich_binh_quan,0,,dau giap lai che kin gia tri
+mau_01_nang_03,thu_nhap_hang_thang,1,7.300.000 đồng,
+cccd_khong_doc_duoc_01,so_dinh_danh,0,,anh gan nhu toi den - khong thay chu nao
+cccd_khong_doc_duoc_01,ho_ten,0,,
+cccd_khong_doc_duoc_01,ngay_sinh,0,,
+cccd_khong_doc_duoc_01,noi_thuong_tru,0,,
+cccd_khong_doc_duoc_02,so_dinh_danh,0,,chi thay khoi mau mo - khong doc duoc
+cccd_khong_doc_duoc_02,ho_ten,0,,
+cccd_khong_doc_duoc_02,ngay_sinh,0,,
+cccd_khong_doc_duoc_02,noi_thuong_tru,0,,
+cccd_khong_doc_duoc_03,so_dinh_danh,0,,
+cccd_khong_doc_duoc_03,ho_ten,0,,
+cccd_khong_doc_duoc_03,ngay_sinh,0,,
+cccd_khong_doc_duoc_03,noi_thuong_tru,0,,
+mau_01_khong_doc_duoc_01,ho_ten_nguoi_viet_don,0,,thay co dong chu nhung khong doc ra ky tu
+mau_01_khong_doc_duoc_01,hinh_thuc,0,,khong thay o tich nao
+mau_01_khong_doc_duoc_01,dien_tich_binh_quan,0,,
+mau_01_khong_doc_duoc_01,thu_nhap_hang_thang,0,,
+mau_01_khong_doc_duoc_02,ho_ten_nguoi_viet_don,0,,
+mau_01_khong_doc_duoc_02,hinh_thuc,0,,
+mau_01_khong_doc_duoc_02,dien_tich_binh_quan,0,,
+mau_01_khong_doc_duoc_02,thu_nhap_hang_thang,0,,
+mau_01_khong_doc_duoc_03,ho_ten_nguoi_viet_don,0,,
+mau_01_khong_doc_duoc_03,hinh_thuc,0,,
+mau_01_khong_doc_duoc_03,dien_tich_binh_quan,0,,
+mau_01_khong_doc_duoc_03,thu_nhap_hang_thang,0,,
+#
+cccd_sach_02,so_dinh_danh,1,000185004567,doc ro
+cccd_sach_02,ho_ten,1,NGUYỄN VĂN HÙNG,doc ro
+cccd_sach_02,ngay_sinh,1,17/11/1985,doc ro
+cccd_sach_02,noi_thuong_tru,1,"Thôn Đoài, Xã Nguyên Khê, Huyện Đông Anh, Thành phố Hà Nội",doc ro
+cccd_sach_03,so_dinh_danh,1,000492007781,doc ro
+cccd_sach_03,ho_ten,1,LÊ THỊ NGỌC HUYỀN,doc ro
+cccd_sach_03,ngay_sinh,1,23/07/1992,doc ro
+cccd_sach_03,noi_thuong_tru,1,"Số 45/7 Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Thành phố Hồ Chí Minh",doc ro
+cccd_sach_04,so_dinh_danh,1,000278003094,doc ro
+cccd_sach_04,ho_ten,1,PHẠM ĐỨC THẮNG,doc ro
+cccd_sach_04,ngay_sinh,1,09/02/1978,doc ro
+cccd_sach_04,noi_thuong_tru,1,"Số 8 Ngõ 32 Đường Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội",doc ro
+cccd_nhe_01,so_dinh_danh,1,000395006612,doc ro
+cccd_nhe_01,ho_ten,1,VÕ THỊ KIM LOAN,doc ro
+cccd_nhe_01,ngay_sinh,1,30/09/1995,doc ro
+cccd_nhe_01,noi_thuong_tru,1,"Tổ 4 Khu phố 2, Phường Long Bình, Thành phố Biên Hòa, Tỉnh Đồng Nai",doc ro
+cccd_nhe_02,so_dinh_danh,1,000188002345,doc ro
+cccd_nhe_02,ho_ten,1,HOÀNG MINH TUẤN,doc ro
+cccd_nhe_02,ngay_sinh,1,12/05/1988,doc ro
+cccd_nhe_02,noi_thuong_tru,1,"Số 210 Đường Trần Phú, Phường Máy Tơ, Quận Ngô Quyền, Thành phố Hải Phòng",doc ro
+cccd_nhe_03,so_dinh_danh,1,000501009923,doc ro
+cccd_nhe_03,ho_ten,1,ĐẶNG THỊ THU HÀ,doc ro
+cccd_nhe_03,ngay_sinh,1,05/12/2001,doc ro
+cccd_nhe_03,noi_thuong_tru,1,"Số 17 Đường Hùng Vương, Phường Thắng Lợi, Thành phố Buôn Ma Thuột, Tỉnh Đắk Lắk",doc ro
+cccd_nhe_04,so_dinh_danh,1,000283005510,doc ro
+cccd_nhe_04,ho_ten,1,BÙI QUỐC ĐẠT,doc ro
+cccd_nhe_04,ngay_sinh,1,28/08/1983,doc ro
+cccd_nhe_04,noi_thuong_tru,1,"Thôn Trung, Xã Tân Ước, Huyện Thanh Oai, Thành phố Hà Nội",doc ro
+cccd_trung_binh_02,so_dinh_danh,1,000301001234,doc ro
+cccd_trung_binh_02,ho_ten,1,TRẦN THỊ MAI,chu doc ro; dau huyen tren A o ranh gioi doc duoc
+cccd_trung_binh_02,ngay_sinh,1,01/03/1990,doc ro
+cccd_trung_binh_02,noi_thuong_tru,1,"Số 12 Đường Lê Duẩn, Phường Tân Mai, Quận Hoàng Mai, Thành phố Hà Nội",doc ro
+cccd_trung_binh_03,so_dinh_danh,1,000185004567,doc ro
+cccd_trung_binh_03,ho_ten,1,NGUYỄN VĂN HÙNG,KHONG nhin ro dau nga tren E - suy tu ngu canh ten pho bien
+cccd_trung_binh_03,ngay_sinh,1,17/11/1985,doc ro
+cccd_trung_binh_03,noi_thuong_tru,1,"Thôn Đoài, Xã Nguyên Khê, Huyện Đông Anh, Thành phố Hà Nội",doc ro
+cccd_trung_binh_04,so_dinh_danh,1,000492007781,doc ro
+cccd_trung_binh_04,ho_ten,1,LÊ THỊ NGỌC HUYỀN,dau huyen tren E rat mo - suy tu ngu canh
+cccd_trung_binh_04,ngay_sinh,1,23/07/1992,doc ro
+cccd_trung_binh_04,noi_thuong_tru,1,"Số 45/7 Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Thành phố Hồ Chí Minh",doc ro
+mau_01_sach_02,ho_ten_nguoi_viet_don,1,PHẠM ĐỨC THẮNG,doc ro
+mau_01_sach_02,hinh_thuc,1,mua,doc ro
+mau_01_sach_02,dien_tich_binh_quan,1,7 m²,doc ro
+mau_01_sach_02,thu_nhap_hang_thang,1,4.800.000 đồng,doc ro
+mau_01_sach_03,ho_ten_nguoi_viet_don,1,VÕ THỊ KIM LOAN,doc ro
+mau_01_sach_03,hinh_thuc,1,thuê,doc ro
+mau_01_sach_03,dien_tich_binh_quan,1,"18,5 m²",doc ro
+mau_01_sach_03,thu_nhap_hang_thang,1,9.750.000 đồng,doc ro
+mau_01_nhe_01,ho_ten_nguoi_viet_don,1,HOÀNG MINH TUẤN,doc ro
+mau_01_nhe_01,hinh_thuc,1,thuê mua,doc ro
+mau_01_nhe_01,dien_tich_binh_quan,1,10 m²,doc ro
+mau_01_nhe_01,thu_nhap_hang_thang,1,7.300.000 đồng,doc ro
+mau_01_nhe_02,ho_ten_nguoi_viet_don,1,ĐẶNG THỊ THU HÀ,doc ro
+mau_01_nhe_02,hinh_thuc,1,mua,doc ro
+mau_01_nhe_02,dien_tich_binh_quan,1,"6,5 m²",doc ro
+mau_01_nhe_02,thu_nhap_hang_thang,1,5.100.000 đồng,doc ro
+mau_01_nhe_03,ho_ten_nguoi_viet_don,1,BÙI QUỐC ĐẠT,doc ro
+mau_01_nhe_03,hinh_thuc,1,thuê,doc ro
+mau_01_nhe_03,dien_tich_binh_quan,1,22 m²,doc ro
+mau_01_nhe_03,thu_nhap_hang_thang,1,13.400.000 đồng,doc ro
+mau_01_trung_binh_01,ho_ten_nguoi_viet_don,1,TRẦN THỊ MAI,doc ro
+mau_01_trung_binh_01,hinh_thuc,1,mua,o thu 1 (Mua) co dau X ro - doc lai xac nhan nhan dung
+mau_01_trung_binh_01,dien_tich_binh_quan,1,15 m²,doc ro
+mau_01_trung_binh_01,thu_nhap_hang_thang,1,8.500.000 đồng,doc ro
+mau_01_trung_binh_02,ho_ten_nguoi_viet_don,1,NGUYỄN VĂN HÙNG,doc ro
+mau_01_trung_binh_02,hinh_thuc,1,thuê,doc ro
+mau_01_trung_binh_02,dien_tich_binh_quan,1,"9,5 m²",doc ro
+mau_01_trung_binh_02,thu_nhap_hang_thang,1,6.200.000 đồng,doc ro
+mau_01_trung_binh_03,ho_ten_nguoi_viet_don,1,LÊ THỊ NGỌC HUYỀN,doc ro
+mau_01_trung_binh_03,hinh_thuc,1,thuê mua,doc ro
+mau_01_trung_binh_03,dien_tich_binh_quan,1,12 m²,doc ro
+mau_01_trung_binh_03,thu_nhap_hang_thang,1,11.000.000 đồng,doc ro

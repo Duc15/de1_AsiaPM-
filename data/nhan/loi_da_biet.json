@@ -1,0 +1,441 @@
+{
+  "_ghi_chu": "Sổ lỗi đã biết cho tests/test_du_lieu.py. Mỗi khoá là một điểm kiểm đang hỏng, gắn vào một mã lỗi trong LOI-PHAT-HIEN.md. Sửa được lỗi nào thì xoá khoá đó đi — hoặc chạy lại script này.",
+  "model": "tesseract",
+  "phien_ban": "tesseract-5.4.0.20240606-vie-psm6",
+  "so_diem_kiem_hong": 61,
+  "theo_ma_loi": {
+    "LOI-01": 12,
+    "LOI-03": 42,
+    "LOI-05": 6,
+    "LOI-02": 1
+  },
+  "diem_kiem": {
+    "cccd_nang_01::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "PHẠM ĐỨC THẮNG",
+      "model_tra": null
+    },
+    "cccd_nang_01::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "Số 8 Ngõ 32 Đường Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội",
+      "model_tra": null
+    },
+    "cccd_nang_01::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000278003094",
+      "model_tra": null
+    },
+    "cccd_nang_02::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "VÕ THỊ KIM LOAN",
+      "model_tra": null
+    },
+    "cccd_nang_02::ngay_sinh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "30/09/1995",
+      "model_tra": null
+    },
+    "cccd_nang_02::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "Tổ 4 Khu phố 2, Phường Long Bình, Thành phố Biên Hòa, Tỉnh Đồng Nai",
+      "model_tra": null
+    },
+    "cccd_nang_02::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000395006612",
+      "model_tra": null
+    },
+    "cccd_nang_03::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "HOÀNG MINH TUẤN",
+      "model_tra": null
+    },
+    "cccd_nang_03::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "Số 210 Đường Trần Phú, Phường Máy Tơ, Quận Ngô Quyền, Thành phố Hải Phòng",
+      "model_tra": null
+    },
+    "cccd_nang_03::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000188002345",
+      "model_tra": null
+    },
+    "cccd_nhe_02::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "HOÀNG MINH TUẤN",
+      "model_tra": "HOÀNG MINH TUẦN"
+    },
+    "cccd_nhe_03::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "ĐẶNG THỊ THU HÀ",
+      "model_tra": "ĐĂNG THỊ THU HÀ"
+    },
+    "cccd_sach_01::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "TRẦN THỊ MAI",
+      "model_tra": "TRẤN THỊ MAI"
+    },
+    "cccd_sach_02::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "NGUYỄN VĂN HÙNG",
+      "model_tra": "NGUYÊN VĂN HÙNG"
+    },
+    "cccd_sach_03::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "thieu_hoac_thua_phan",
+      "nhan": "LÊ THỊ NGỌC HUYỀN",
+      "model_tra": "LÊ THỊ NGỌC"
+    },
+    "cccd_trung_binh_01::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "TRƯƠNG THỊ BÍCH PHƯỢNG",
+      "model_tra": null
+    },
+    "cccd_trung_binh_01::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "Số 3 Đường Nguyễn Huệ, Phường Vĩnh Ninh, Thành phố Huế",
+      "model_tra": null
+    },
+    "cccd_trung_binh_01::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000396001178",
+      "model_tra": null
+    },
+    "cccd_trung_binh_02::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "TRẦN THỊ MAI",
+      "model_tra": null
+    },
+    "cccd_trung_binh_02::ngay_sinh": {
+      "loi": "LOI-03",
+      "phan_quyet": "SAI",
+      "loai_sai": "khong_phai_ngay",
+      "nhan": "01/03/1990",
+      "model_tra": "01/03⁄1990"
+    },
+    "cccd_trung_binh_02::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "SAI",
+      "loai_sai": "lech_qua_nguong",
+      "nhan": "Số 12 Đường Lê Duẩn, Phường Tân Mai, Quận Hoàng Mai, Thành phố Hà Nội",
+      "model_tra": "Số 12 Đướng Lê Duẩn, Phường Tân Mai P. Quận Hoàng Mai. Thánh phố Hà NỘI"
+    },
+    "cccd_trung_binh_02::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000301001234",
+      "model_tra": null
+    },
+    "cccd_trung_binh_03::ho_ten": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_vai_ky_tu",
+      "nhan": "NGUYỄN VĂN HÙNG",
+      "model_tra": "NGUYÊN VĂN"
+    },
+    "cccd_trung_binh_03::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000185004567",
+      "model_tra": null
+    },
+    "cccd_trung_binh_04::ho_ten": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "LÊ THỊ NGỌC HUYỀN",
+      "model_tra": null
+    },
+    "cccd_trung_binh_04::noi_thuong_tru": {
+      "loi": "LOI-03",
+      "phan_quyet": "SAI",
+      "loai_sai": "lech_qua_nguong",
+      "nhan": "Số 45/7 Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Thành phố Hồ Chí Minh",
+      "model_tra": "Số 45/7 Đường Nguyễn Ảnh Thủ, ơng ï vn Quận 12. Thánh phố Hỗ Chí Minh"
+    },
+    "cccd_trung_binh_04::so_dinh_danh": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "000492007781",
+      "model_tra": null
+    },
+    "mau_01_nang_01::dien_tich_binh_quan": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "7 m²",
+      "model_tra": null
+    },
+    "mau_01_nang_01::hinh_thuc": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "mua",
+      "model_tra": null
+    },
+    "mau_01_nang_01::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "PHẠM ĐỨC THẮNG",
+      "model_tra": null
+    },
+    "mau_01_nang_01::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "4.800.000 đồng",
+      "model_tra": null
+    },
+    "mau_01_nang_02::dien_tich_binh_quan": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "18,5 m²",
+      "model_tra": null
+    },
+    "mau_01_nang_02::hinh_thuc": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "thuê",
+      "model_tra": null
+    },
+    "mau_01_nang_02::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "VÕ THỊ KIM LOAN",
+      "model_tra": null
+    },
+    "mau_01_nang_02::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "9.750.000 đồng",
+      "model_tra": null
+    },
+    "mau_01_nang_03::hinh_thuc": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "thuê mua",
+      "model_tra": null
+    },
+    "mau_01_nang_03::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "HOÀNG MINH TUẤN",
+      "model_tra": null
+    },
+    "mau_01_nang_03::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "7.300.000 đồng",
+      "model_tra": null
+    },
+    "mau_01_nhe_01::dien_tich_binh_quan": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_gia_tri_so",
+      "nhan": "10 m²",
+      "model_tra": "7"
+    },
+    "mau_01_nhe_01::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "HOÀNG MINH TUẤN",
+      "model_tra": "HOÀNG MỊNH TUẦN"
+    },
+    "mau_01_nhe_01::thu_nhap_hang_thang": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_1_chu_so",
+      "nhan": "7.300.000 đồng",
+      "model_tra": "7 200.000"
+    },
+    "mau_01_nhe_02::dien_tich_binh_quan": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_gia_tri_so",
+      "nhan": "6,5 m²",
+      "model_tra": "6"
+    },
+    "mau_01_nhe_02::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_hoan_toan",
+      "nhan": "ĐẶNG THỊ THU HÀ",
+      "model_tra": "THỊTHUHA"
+    },
+    "mau_01_nhe_03::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_vai_ky_tu",
+      "nhan": "BÙI QUỐC ĐẠT",
+      "model_tra": "QUÓC ĐẠT"
+    },
+    "mau_01_sach_01::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_vai_ky_tu",
+      "nhan": "LÊ THỊ NGỌC HUYỀN",
+      "model_tra": "LẺ NGOC HUYỆN"
+    },
+    "mau_01_sach_01::thu_nhap_hang_thang": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_1_chu_so",
+      "nhan": "11.000.000 đồng",
+      "model_tra": "17,000,000"
+    },
+    "mau_01_sach_02::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_dau",
+      "nhan": "PHẠM ĐỨC THẮNG",
+      "model_tra": "PHAM ĐỨC THẮNG"
+    },
+    "mau_01_sach_03::dien_tich_binh_quan": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_gia_tri_so",
+      "nhan": "18,5 m²",
+      "model_tra": "18"
+    },
+    "mau_01_sach_03::thu_nhap_hang_thang": {
+      "loi": "LOI-05",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_so_chu_so",
+      "nhan": "9.750.000 đồng",
+      "model_tra": "9.7590.000"
+    },
+    "mau_01_trung_binh_01::dien_tich_binh_quan": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "15 m²",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_01::hinh_thuc": {
+      "loi": "LOI-02",
+      "phan_quyet": "SAI",
+      "loai_sai": "chon_sai_o",
+      "nhan": "mua",
+      "model_tra": "thuê mua"
+    },
+    "mau_01_trung_binh_01::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-01",
+      "phan_quyet": "SAI",
+      "loai_sai": "sai_vai_ky_tu",
+      "nhan": "TRẦN THỊ MAI",
+      "model_tra": "TRÀ THỊ MAI"
+    },
+    "mau_01_trung_binh_01::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "8.500.000 đồng",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_02::dien_tich_binh_quan": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "9,5 m²",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_02::hinh_thuc": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "thuê",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_02::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "NGUYỄN VĂN HÙNG",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_02::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "6.200.000 đồng",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_03::dien_tich_binh_quan": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "12 m²",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_03::hinh_thuc": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "thuê mua",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_03::ho_ten_nguoi_viet_don": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "LÊ THỊ NGỌC HUYỀN",
+      "model_tra": null
+    },
+    "mau_01_trung_binh_03::thu_nhap_hang_thang": {
+      "loi": "LOI-03",
+      "phan_quyet": "BO_SOT",
+      "loai_sai": "im_lang_tren_anh_doc_duoc",
+      "nhan": "11.000.000 đồng",
+      "model_tra": null
+    }
+  }
+}

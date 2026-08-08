@@ -1,0 +1,19 @@
+{
+  "so_anh": 33,
+  "so_anh_lay_mau_luot2": 33,
+  "so_truong_so_sanh_duoc": 105,
+  "so_truong_khop": 105,
+  "ty_le_khop": 1.0,
+  "cac_cho_lech": [],
+  "phan_bo_ky_vong": {
+    "phai_trich_dung": 105,
+    "vung_xam": 3,
+    "phai_tu_choi": 24
+  },
+  "gioi_han": [
+    "Lượt đọc lại do một mô hình ngôn ngữ đọc ảnh trong cùng phiên đã sinh ảnh; phần phiên âm giá trị KHÔNG độc lập hoàn toàn, nên ty_le_khop là chặn trên chứ không phải số đo sạch. Muốn có số sạch cần hai người thật gán nhãn mù rồi tính Cohen's kappa.",
+    "Sản phẩm đáng tin của lượt đọc lại là phán quyết đọc được / không đọc được, vì phán quyết đó không thể suy ra từ bản kê.",
+    "Lượt 3 đã bổ sung nốt 18 ảnh bậc sach/nhe/trung_binh, nên nay 33/33 ảnh đều có người đọc lại — không còn ảnh nào mang kỳ vọng hành vi do script gán mặc định. Giả định GĐ-3 đã được gỡ: 18/18 ảnh đọc được rõ, con số không đổi.",
+    "Phát hiện của lượt 3, phải ghi lại vì nó làm nhẹ bớt lỗi LOI-01: trên 3 ảnh CCCD bậc trung_binh, người đọc lại đọc được CHỮ nhưng KHÔNG nhìn rõ DẤU THANH (dấu ngã trên NGUYỄN, dấu huyền trên HUYỀN) và phải suy từ ngữ cảnh tên phổ biến. Nghĩa là ở bậc đó thông tin dấu có thể đã bị phá huỷ trong ảnh — quy toàn bộ lỗi dấu cho model là chưa hoàn toàn công bằng. Xem cột ghi_chu_luot2."
+  ]
+}

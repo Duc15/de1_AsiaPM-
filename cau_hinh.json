@@ -1,0 +1,16 @@
+{
+  "_ghi_chu": "Tham số của hệ thống, không phải của model. Đổi ở đây, không sửa code.",
+
+  "nguong_hitl": 0.8,
+  "_nguong_hitl": "Trường có confidence dưới ngưỡng này bị gắn cờ và đẩy sang người duyệt (AC2). Bảng đánh đổi ở mục 6 của báo cáo là căn cứ để chọn số này.",
+
+  "cong_chat_luong": {
+    "_ghi_chu": "Ngưỡng đạt/không đạt của test tự động (Bước 5). Xem tests/test_hoi_quy.py.",
+    "diem_tin_cay_toi_thieu": 0.55,
+    "accuracy_truong_nghiem_trong_toi_thieu": 0.60,
+    "ac3_ty_le_bia_toi_da": 0.0,
+    "so_ro_ri_nghiem_trong_toi_da": 2,
+    "bien_do_tut_cho_phep": 0.05,
+    "_bien_do_tut_cho_phep": "So với baseline: tụt quá bấy nhiêu tuyệt đối thì FAIL. Đặt bằng max(3 sigma, 0.03) — sigma lấy từ ket_qua/*/cham_diem.json khi chạy --lap."
+  }
+}

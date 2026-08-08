@@ -1,0 +1,80 @@
+{
+  "so_mutation": 8,
+  "so_bi_bat": 7,
+  "so_song_sot_da_truy_nguyen": 1,
+  "so_lo_hong": 0,
+  "chi_tiet": [
+    {
+      "ma": "M1",
+      "mo_ta": "Cổng HITL so sánh sai ranh giới: dùng <= thay vì < (AC2)",
+      "ca": "TC_AC2_03",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC2_03_ca_bien_conf_dung_bang_nguong"
+    },
+    {
+      "ma": "M2",
+      "mo_ta": "Cổng HITL ngừng gắn cờ: mọi trường đều coi như đủ tin cậy (AC2)",
+      "ca": "TC_AC2_01",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC2_01_truong_duoi_nguong_bi_danh_dau"
+    },
+    {
+      "ma": "M3",
+      "mo_ta": "Sổ bằng chứng ghi sai băm ảnh gốc — liên kết hồ sơ↔ảnh nói dối (AC1)",
+      "ca": "TC_AC1_04",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC1_04_anh_goc_duoc_lien_ket_trong_so_bang_chung"
+    },
+    {
+      "ma": "M4",
+      "mo_ta": "Ảnh không đọc được vẫn bị đánh dấu đủ điều kiện xử lý (AC3)",
+      "ca": "TC_AC3_02",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC3_02_ho_so_khong_doc_duoc_co_trang_thai_can_bo_sung"
+    },
+    {
+      "ma": "M5",
+      "mo_ta": "Hồ sơ cần bổ sung nhưng không kèm lý do (AC3)",
+      "ca": "TC_AC3_03",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC3_03_moi_ho_so_can_bo_sung_deu_co_ly_do"
+    },
+    {
+      "ma": "M6",
+      "mo_ta": "Bỏ chính sách từ chối: ép model đoán bừa trên ảnh không đọc được (AC3)",
+      "ca": "TC_AC3_01",
+      "trang_thai": "SONG_SOT",
+      "song_sot_da_truy_nguyen": true,
+      "ly_do_chap_nhan": "Đã truy nguyên: bỏ chính sách từ chối KHÔNG sinh ra hành vi bịa, vì bộ tách còn một lớp phòng vệ thứ hai — nó chỉ trả giá trị khi khớp được mốc neo, và trên 6 ảnh không đọc được thì OCR ra toàn rác nên không mốc neo nào khớp. Mutation này không tạo được lỗi cần bắt, nên nó không chứng minh gì về TC_AC3_01. Ca đó được chứng minh bằng M8 thay thế.",
+      "duoi_log": ".                                                                        [100%]"
+    },
+    {
+      "ma": "M7",
+      "mo_ta": "Trường mất điểm tin cậy — cổng HITL không phân loại được nó (AC1)",
+      "ca": "TC_AC1_02",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC1_02_moi_truong_deu_co_diem_tin_cay"
+    },
+    {
+      "ma": "M8",
+      "mo_ta": "Bộ tách bịa: không khớp mốc neo thì lấy dòng OCR đầu tiên làm giá trị (AC3)",
+      "ca": "TC_AC3_01",
+      "trang_thai": "BI_BAT",
+      "song_sot_da_truy_nguyen": false,
+      "ly_do_chap_nhan": null,
+      "duoi_log": "FAILED tests/test_dac_ta_ac.py::test_TC_AC3_01_khong_bia_du_lieu_tren_anh_khong_doc_duoc"
+    }
+  ]
+}
