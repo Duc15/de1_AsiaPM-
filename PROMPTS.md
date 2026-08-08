@@ -32,6 +32,10 @@ kiểm chứng được ngay:
 > `doc_lai_doc_lap.csv` đọc được gì. Rồi tính độ đồng thuận giữa hai lượt bằng
 > ĐÚNG luật so khớp của Bước 1, và viết rõ giới hạn của phép đo đồng thuận đó.
 
+*Nói rõ chỗ này vì nó là chỗ dễ đọc nhầm nhất: lượt đọc lại rốt cuộc do **chính
+AI** mở ảnh ra đọc, không phải một người thứ hai. Nên đồng thuận 105/105 là chặn
+trên chứ không phải bằng chứng nhãn đúng — giới hạn đó là **GH-04**, đang mở.*
+
 **Lượt 4 — bộ đo (Bước 4)**
 > Viết adapter Tesseract + bộ tách trường neo theo nhãn in, và bộ chấm điểm.
 > Báo cáo phải trả lời được cho người không đọc code: sai Ở ĐÂU (loại giấy tờ,

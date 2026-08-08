@@ -42,6 +42,21 @@ _MONO = ["C:/Windows/Fonts/consola.ttf",
 TEN_FONT = "BaoCao"
 TEN_MONO = "BaoCaoMono"
 
+# ---------------------------------------------------------------------------
+# THAM SỐ DÀN TRANG CỦA BẢN NỘP — nguồn sự thật duy nhất.
+#
+# Trước đây script CLI và `tests/test_nop_bai.py` mỗi bên tự khai một bộ tham số
+# (8 pt + ép ngắt trang / 10 pt + không ngắt). Hậu quả: cổng nghiệm thu báo
+# "2 trang ĐẠT" trong khi tệp `BAO-CAO.pdf` thật sự nộp đi lại dày 3 trang —
+# cổng đo một thứ, người chấm mở một thứ khác. Đây là lỗi BD-08.
+# Từ nay cả hai đường đều đi qua ba hằng số dưới đây.
+# ---------------------------------------------------------------------------
+_TOI_DA_HANG_GIU_KHOI = 4   # bảng nhiều hàng hơn mức này được phép tách trang
+
+CO_CHU_NOP = 10.0
+LE_MM_NOP = 12.0
+NGAT_TRANG_NOP: str | None = None   # không ép câu hỏi cuối sang trang mới
+
 
 def _dang_ky_font() -> None:
     if TEN_FONT in pdfmetrics.getRegisteredFontNames():
@@ -134,7 +149,7 @@ def dung_noi_dung(md: str, kieu: dict, rong: float) -> list:
             while i < len(dong) and dong[i].strip().startswith("|"):
                 than.append(_tach_hang_bang(dong[i]))
                 i += 1
-            ra.append(_dung_bang(tieu_de, than, kieu, rong))
+            ra.extend(_dung_bang(tieu_de, than, kieu, rong))
             continue
 
         if re.match(r"^[-*]\s+", rong_d):
@@ -180,7 +195,15 @@ def _dung_bang(tieu_de: list[str], than: list[list[str]], kieu: dict, rong: floa
         ("TOPPADDING", (0, 0), (-1, -1), 1.2),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 1.2),
     ]))
-    return KeepTogether([t, Spacer(1, 3)])
+    # Bảng ngắn thì giữ nguyên khối cho dễ đọc. Bảng dài thì PHẢI cho phép tách
+    # trang: gói cả bảng vào KeepTogether khiến một bảng không vừa chỗ trống bị
+    # đẩy nguyên sang trang sau, bỏ hoang phần đuôi trang trước — đo được là mất
+    # ~19 dòng ở trang 1, đủ để báo cáo tràn sang trang thứ ba trong khi nội dung
+    # vẫn nằm gọn trong hai trang. `repeatRows=1` ở trên có sẵn để lặp lại hàng
+    # tiêu đề khi bảng bị tách, nên nó chỉ vô dụng chừng nào còn KeepTogether.
+    if len(than) <= _TOI_DA_HANG_GIU_KHOI:
+        return [KeepTogether([t, Spacer(1, 3)])]
+    return [t, Spacer(1, 3)]
 
 
 # ---------------------------------------------------------------------------

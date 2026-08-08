@@ -24,12 +24,19 @@ import pytest
 GOC = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(GOC))
 
-from bo_do.xuat_pdf import dem_trang, xuat_pdf  # noqa: E402
+from bo_do.xuat_pdf import (CO_CHU_NOP, LE_MM_NOP, NGAT_TRANG_NOP,  # noqa: E402
+                            dem_trang, xuat_pdf)
 
 BAO_CAO = GOC / "BAO-CAO.md"
+BAO_CAO_PDF = GOC / "BAO-CAO.pdf"
 TOI_DA_TRANG = 2
-CO_CHU = 10.0
-LE_MM = 12.0
+# Lấy thẳng từ bo_do/xuat_pdf.py — KHÔNG khai lại ở đây. Khai lại chính là lỗi
+# BD-08: cổng đo bản render 10 pt không ngắt trang (2 trang, xanh) trong khi
+# `scripts/xuat_bao_cao_pdf.py` ghi ra bản 8 pt có ngắt trang (3 trang) và đó mới
+# là tệp thật sự nộp đi.
+CO_CHU = CO_CHU_NOP
+LE_MM = LE_MM_NOP
+NGAT = NGAT_TRANG_NOP
 
 
 @pytest.fixture(scope="module")
@@ -37,7 +44,8 @@ def pdf_va_van_ban(tmp_path_factory):
     pytest.importorskip("pypdf", reason="cần pypdf để đọc lại PDF đã render")
     from pypdf import PdfReader
     tep = tmp_path_factory.mktemp("pdf") / "bao-cao.pdf"
-    so_trang = xuat_pdf(BAO_CAO, tep, co_chu=CO_CHU, le_mm=LE_MM)
+    so_trang = xuat_pdf(BAO_CAO, tep, co_chu=CO_CHU, le_mm=LE_MM,
+                        ngat_trang_truoc=NGAT)
     doc = PdfReader(str(tep))
     return so_trang, "\n".join(t.extract_text() or "" for t in doc.pages)
 
@@ -210,6 +218,37 @@ def test_TC_NOP_14_bao_cao_neu_ro_gioi_han_cua_phep_do():
 
 def test_TC_NOP_15_so_trang_on_dinh_qua_cac_lan_render():
     """Số trang phải tất định, nếu không thì cổng TC-NOP-01 lúc xanh lúc đỏ."""
-    a = dem_trang(BAO_CAO, co_chu=CO_CHU, le_mm=LE_MM)
-    b = dem_trang(BAO_CAO, co_chu=CO_CHU, le_mm=LE_MM)
-    assert a == b == dem_trang(BAO_CAO, co_chu=CO_CHU, le_mm=LE_MM)
+    kw = dict(co_chu=CO_CHU, le_mm=LE_MM, ngat_trang_truoc=NGAT)
+    a = dem_trang(BAO_CAO, **kw)
+    b = dem_trang(BAO_CAO, **kw)
+    assert a == b == dem_trang(BAO_CAO, **kw)
+
+
+def test_TC_NOP_16_pdf_da_nop_khop_voi_ban_render_hien_tai():
+    """Cổng phải đo ĐÚNG TỆP NỘP ĐI, không đo một bản render khác (lỗi BD-08).
+
+    Người chấm mở `BAO-CAO.pdf`, không mở `BAO-CAO.md`. Nên tệp PDF trong repo
+    phải (a) tồn tại, (b) ≤ 2 trang, (c) là bản render của đúng nội dung .md hiện
+    tại — sửa .md mà quên chạy lại script thì cổng này ĐỎ.
+    """
+    pytest.importorskip("pypdf", reason="cần pypdf để đọc lại PDF đã render")
+    from pypdf import PdfReader
+
+    assert BAO_CAO_PDF.exists(), (
+        "thiếu BAO-CAO.pdf. Chạy: python scripts/xuat_bao_cao_pdf.py")
+
+    da_nop = PdfReader(str(BAO_CAO_PDF))
+    assert len(da_nop.pages) <= TOI_DA_TRANG, (
+        f"BAO-CAO.pdf trong repo dày {len(da_nop.pages)} trang, đề giới hạn "
+        f"{TOI_DA_TRANG}. Đây là tệp người chấm mở ra đọc.")
+
+    import tempfile
+    with tempfile.TemporaryDirectory() as tam:
+        moi = Path(tam) / "moi.pdf"
+        xuat_pdf(BAO_CAO, moi, co_chu=CO_CHU, le_mm=LE_MM, ngat_trang_truoc=NGAT)
+        van_ban_moi = "\n".join(t.extract_text() or "" for t in PdfReader(str(moi)).pages)
+
+    van_ban_cu = "\n".join(t.extract_text() or "" for t in da_nop.pages)
+    assert _chuan(van_ban_cu) == _chuan(van_ban_moi), (
+        "BAO-CAO.pdf đã cũ so với BAO-CAO.md. Chạy lại: "
+        "python scripts/xuat_bao_cao_pdf.py")

@@ -16,7 +16,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[union-attr]
 
-from bo_do.xuat_pdf import dem_trang, xuat_pdf  # noqa: E402
+from bo_do.xuat_pdf import (CO_CHU_NOP, LE_MM_NOP, NGAT_TRANG_NOP,  # noqa: E402
+                            dem_trang, xuat_pdf)
 
 GOC = Path(__file__).resolve().parents[1]
 NGAT_TRANG = "# Trả lời câu hỏi cuối"
@@ -24,18 +25,19 @@ NGAT_TRANG = "# Trả lời câu hỏi cuối"
 ap = argparse.ArgumentParser()
 ap.add_argument("--md", default="BAO-CAO.md")
 ap.add_argument("--pdf", default=None)
-ap.add_argument("--co-chu", type=float, default=8.0)
-ap.add_argument("--le-mm", type=float, default=12.0)
+ap.add_argument("--co-chu", type=float, default=CO_CHU_NOP)
+ap.add_argument("--le-mm", type=float, default=LE_MM_NOP)
 ap.add_argument("--toi-da", type=int, default=2, help="số trang tối đa cho phép")
 ap.add_argument("--do-thu", action="store_true",
                 help="dò cỡ chữ lớn nhất mà vẫn nằm trong giới hạn trang")
-ap.add_argument("--khong-ngat-trang", action="store_true",
-                help="không ép câu hỏi cuối sang trang mới")
+ap.add_argument("--ngat-trang", action="store_true",
+                help="ép câu hỏi cuối sang trang mới (KHÔNG phải mặc định: nó tốn "
+                     "nguyên một trang và làm bản nộp lệch khỏi cổng nghiệm thu)")
 a = ap.parse_args()
 
 md = GOC / a.md
 pdf = Path(a.pdf) if a.pdf else md.with_suffix(".pdf")
-ngat = None if a.khong_ngat_trang else NGAT_TRANG
+ngat = NGAT_TRANG if a.ngat_trang else NGAT_TRANG_NOP
 
 if a.do_thu:
     print(f"Dò cỡ chữ cho {md.name} (giới hạn {a.toi_da} trang, lề {a.le_mm} mm):\n")

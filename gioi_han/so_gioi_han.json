@@ -54,7 +54,7 @@
         "accuracy_truong_doc_duoc",
         "so_anh_doc_duoc_chu_nhung_khong_neo_duoc_truong"
       ],
-      "khong_chung_minh_duoc": "Không kết luận được 'Tesseract kém với tiếng Việt'. Bộ tách trường là của tôi và đã có 7 lỗi bị bắt (BD-01…BD-07); riêng ba lỗi đầu đưa con số từ 32,4 % lên 41,9 %, tức gần một phần tư 'lỗi của model' ban đầu là lỗi của người đo. Không có gì bảo đảm đã hết loại đó.",
+      "khong_chung_minh_duoc": "Không kết luận được 'Tesseract kém với tiếng Việt'. Bộ tách trường là của tôi và đã có 8 lỗi bị bắt (BD-01…BD-08); riêng ba lỗi đầu đưa con số từ 32,4 % lên 41,9 %, tức gần một phần tư 'lỗi của model' ban đầu là lỗi của người đo. Không có gì bảo đảm đã hết loại đó.",
       "bang_chung_de_go": "Cắm ít nhất một cụm trích xuất thứ hai có bộ tách độc lập (ví dụ một VLM trả thẳng JSON, không cần bộ tách của tôi). Nếu thứ hạng giữ nguyên thì phần đóng góp của bộ tách là nhỏ.",
       "trang_thai": "mo",
       "hau_qua_neu_bo_qua": "Loại oan một model tốt, hoặc chọn model dựa trên chất lượng bộ tách chứ không phải chất lượng model."
@@ -136,16 +136,16 @@
     },
     {
       "ma": "GH-10",
-      "tieu_de": "18/33 ảnh chưa có người đọc lại (GĐ-3)",
+      "tieu_de": "18/33 ảnh chưa được đọc lại ở lượt 2 (GĐ-3)",
       "muc_do": "thu_hep",
       "chan_cac_chi_so": [
         "accuracy_truong_doc_duoc",
         "phan_bo_ky_vong"
       ],
-      "khong_chung_minh_duoc": "Kỳ vọng hành vi của 18 ảnh bậc sach/nhe/trung_binh do script gán mặc định là 'người đọc được', chưa ai kiểm. Nếu sai thì mẫu số 105 sai theo và accuracy lệch.",
+      "khong_chung_minh_duoc": "Kỳ vọng hành vi của 18 ảnh bậc sach/nhe/trung_binh do script gán mặc định là 'đọc được', chưa lượt nào kiểm. Nếu sai thì mẫu số 105 sai theo và accuracy lệch.",
       "bang_chung_de_go": "Đọc lại nốt 18 ảnh đó bằng mắt và ghi vào doc_lai_doc_lap.csv.",
       "trang_thai": "da_go",
-      "bang_chung_da_go": "Lượt đọc lại ngày 2026-08-08 đã đọc nốt 18/18 ảnh: tất cả đọc được rõ toàn bộ trường. Nay 33/33 ảnh đều có người đọc lại, đồng thuận 105/105. Giả định được XÁC NHẬN, các con số không đổi. Xem data/nhan/doc_lai_doc_lap.csv và do_dong_thuan.json.",
+      "bang_chung_da_go": "Lượt đọc lại ngày 2026-08-08 đã đọc nốt 18/18 ảnh: tất cả đọc được rõ toàn bộ trường. Nay 33/33 ảnh đều được đọc lại, đồng thuận 105/105. Giả định được XÁC NHẬN, các con số không đổi. LƯU Ý: annotator #2 là một mô hình ngôn ngữ, không phải người — giới hạn đó nằm ở GH-04 và không được gỡ theo. Xem data/nhan/doc_lai_doc_lap.csv và do_dong_thuan.json.",
       "hau_qua_neu_bo_qua": "(đã gỡ)"
     },
     {

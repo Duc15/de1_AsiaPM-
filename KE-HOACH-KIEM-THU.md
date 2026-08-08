@@ -67,10 +67,15 @@ nên đó mới là thứ phải kiểm thử.
 | **Kiểm thử thăm dò** | đọc bằng mắt từng trường sai **trên ảnh sạch nhất**; cách tìm ra BD-01…BD-04 | — |
 | **Kiểm thử đột biến** | `scripts/kiem_tra_bo_test.py` — gài lỗi có chủ ý để chứng minh bộ test có răng | 8 |
 | **Kiểm thử hồi quy** | baseline + cổng 3 tầng + sổ lỗi đã biết `xfail(strict)` | 10 |
-| **Kiểm thử chính bài nộp** | mục 06 của đề là danh sách nghiệm thu: render báo cáo ra PDF rồi đếm số trang thật, canh không mục nào bị cắt cho vừa trang, đủ sản phẩm phải nộp | 27 |
+| **Kiểm thử chính bài nộp** | mục 06 của đề là danh sách nghiệm thu: render báo cáo ra PDF rồi đếm số trang thật, canh không mục nào bị cắt cho vừa trang, đủ sản phẩm phải nộp | 28 |
 
-**Tổng: 244 ca tự động.** Không có ca nào chạy tay — kể cả lượt gán nhãn thứ hai
-(việc của người) cũng được đóng băng thành `doc_lai_doc_lap.csv` để máy đọc lại.
+**Tổng: 296 ca `pytest` + 8 ca đột biến chạy riêng.** Bảng trên liệt kê theo *kỹ
+thuật thiết kế*, nên có ô chồng lấn (6 ca giá trị biên và 8 ca bảng quyết định nằm
+trong 47 ca đơn vị của thước đo). Con số chốt là con số `pytest` đếm được:
+38 Gherkin · 47 đơn vị thước đo · 13 fitness kiến trúc · 11 đường lỗi adapter ·
+15 đặc tả AC · 134 dữ liệu (132 điểm kiểm + 2 toàn vẹn) · 10 hồi quy · 28 nghiệm
+thu bài nộp. Không có ca nào chạy tay — kể cả lượt gán nhãn thứ hai cũng được
+đóng băng thành `doc_lai_doc_lap.csv` để máy đọc lại.
 
 **Xử lý điểm kiểm đang hỏng.** 61/129 điểm kiểm KHÔNG ĐẠT vì model thật sự yếu. Để
 nguyên thì bộ test đỏ rực và mất tác dụng cảnh báo. Mỗi điểm kiểm hỏng vì thế được quy
@@ -91,24 +96,24 @@ tay SHA-256 để baseline không so nhầm hai bộ dữ liệu khác nhau.
 | Bước 1 | luật theo từng kiểu trường + 6 phán quyết + biên | `TC-LUAT-10..52` | ĐẠT (bắt được BD-05) |
 | — | đường lỗi adapter, tính tất định | `TC-BT-01..11` | ĐẠT (bắt được BD-06) |
 | AC1 | trường được điền vào **schema chuẩn** | `TC-AC1-01` | ĐẠT |
-| AC1 | **mỗi trường kèm một điểm tin cậy** | `TC-AC1-02` | ĐẠT *(sau khi sửa LOI-04)* |
+| AC1 | **mỗi trường kèm một điểm tin cậy** | `TC-AC1-02` | ĐẠT |
 | AC1 | `nguon` thuộc tập đặc tả | `TC-AC1-03` | ĐẠT |
-| AC1 | **ảnh gốc được liên kết trong sổ bằng chứng** | `TC-AC1-04` | ĐẠT *(sau khi sửa LOI-04)* |
-| AC1 | **nhật ký worker được ghi** | `TC-AC1-05` | ĐẠT *(sau khi sửa LOI-04)* |
-| AC2 | trường **dưới ngưỡng** bị đánh dấu cần người xác nhận | `TC-AC2-01` | ĐẠT *(sau khi sửa LOI-05)* |
+| AC1 | **ảnh gốc được liên kết trong sổ bằng chứng** | `TC-AC1-04` | ĐẠT *(sau khi sửa LOI-07)* |
+| AC1 | **nhật ký worker được ghi** | `TC-AC1-05` | ĐẠT *(sau khi sửa LOI-07)* |
+| AC2 | trường **dưới ngưỡng** bị đánh dấu cần người xác nhận | `TC-AC2-01` | ĐẠT *(sau khi sửa LOI-08)* |
 | AC2 | trường trên ngưỡng **không** bị đánh dấu thừa | `TC-AC2-02` | ĐẠT |
 | AC2 | ranh giới: conf **đúng bằng** ngưỡng | `TC-AC2-03` | ĐẠT |
 | AC2 | ngưỡng **cấu hình được** | `TC-AC2-04` | ĐẠT |
 | AC2 | "được **hiển thị nổi bật** cho người duyệt" | — | **KHÔNG KIỂM ĐƯỢC** (giao diện người duyệt ngoài phạm vi). Kiểm tới lớp dữ liệu: cờ `can_nguoi_xac_nhan` có mặt và đúng. |
 | AC3 | hệ thống **KHÔNG bịa dữ liệu** | `TC-AC3-01` | ĐẠT (0/24 trường) |
-| AC3 | hồ sơ đặt trạng thái **"cần bổ sung"** | `TC-AC3-02` | ĐẠT *(sau khi sửa LOI-06)* |
-| AC3 | **kèm lý do** | `TC-AC3-03` | ĐẠT *(sau khi sửa LOI-06)* |
+| AC3 | hồ sơ đặt trạng thái **"cần bổ sung"** | `TC-AC3-02` | ĐẠT *(sau khi sửa LOI-09)* |
+| AC3 | **kèm lý do** | `TC-AC3-03` | ĐẠT *(sau khi sửa LOI-09)* |
 | AC3 | mặt trái: hồ sơ đi tiếp phải đủ trường bắt buộc | `TC-AC3-04` | ĐẠT |
 | — | bao phủ của chính bộ test | `TC-BAO-PHU-01/02` | ĐẠT |
 
-Ba dòng ghi *"sau khi sửa"* là lỗi do chính việc viết ca kiểm thử theo đặc tả tìm
+Năm dòng ghi *"sau khi sửa"* là lỗi do chính việc viết ca kiểm thử theo đặc tả tìm
 ra — trước đó đầu ra thiếu hẳn liên kết ảnh gốc, nhật ký worker, cờ HITL và trạng
-thái hồ sơ. Chi tiết: `LOI-PHAT-HIEN.md` (LOI-04, LOI-05, LOI-06).
+thái hồ sơ. Chi tiết: `LOI-PHAT-HIEN.md` (LOI-07, LOI-08, LOI-09).
 
 **Bao phủ đặc tả: 14/15 điều khoản kiểm được, 1 điều khoản ngoài phạm vi và được
 ghi rõ là không kiểm được.** Không có điều khoản nào bị bỏ quên trong im lặng.

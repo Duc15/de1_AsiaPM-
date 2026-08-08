@@ -276,8 +276,9 @@ cho đi tiếp thì không được thiếu trường bắt buộc). Mutation M4
 
 ## Phụ lục — lỗi trong chính bộ kiểm thử
 
-Ghi lại để minh bạch: bốn lỗi dưới đây nằm ở **bộ đo**, không ở SUT, và chúng đã
-làm con số báo cáo sai trước khi bị bắt. Chi tiết kỹ thuật ở `PROMPTS.md`.
+Ghi lại để minh bạch: tám lỗi dưới đây nằm ở **bộ đo**, không ở SUT, và chúng đã
+làm con số báo cáo sai — hoặc làm cổng nghiệm thu nói dối — trước khi bị bắt. Chi
+tiết kỹ thuật ở `PROMPTS.md`.
 
 | Mã | Lỗi | Hậu quả trước khi sửa | Tìm ra bằng |
 |---|---|---|---|
@@ -288,6 +289,7 @@ làm con số báo cáo sai trước khi bị bắt. Chi tiết kỹ thuật ở
 | BD-05 | `chuan_hoa.so()` vét chữ số **sau khi** đã có đơn vị: `'15 m2'` → **152** | Trường diện tích bị tính sai bất cứ khi nào OCR đọc `m²` thành `m2` — mà Tesseract đọc như thế rất thường xuyên (`'7 m2 mm -'`). Hiện chưa bung ra vì bộ tách bóc số trước, nhưng adapter khác cắm vào là dính ngay | **unit test `TC-LUAT-32`** |
 | BD-06 | Canary hard-code `C:/Windows/Fonts/arial.ttf` | Canary vỡ trên Linux ⇒ bộ đo **dừng** và báo "lỗi hạ tầng" ở CI, dù model không sao | dựng CI |
 | BD-07 | `doc_luot_hai()` cho khoá (ảnh, trường) trùng lặp, **dòng cuối thắng, im lặng** | Sổ gán nhãn bị thêm một khối 72 dòng cho cùng 18 ảnh, hai khối mâu thuẫn ở phần ghi chú, bộ đo vẫn chạy êm và chỉ lấy khối cuối. Nhãn là thước đo duy nhất — nó phải nổ chứ không được tự chọn hộ. Nay ném lỗi kèm danh sách khoá trùng | rà tính toàn vẹn dữ liệu |
+| BD-08 | **Cổng "≤ 2 trang" đo một bản render khác bản nộp đi** | `tests/test_nop_bai.py` tự khai 10 pt + không ngắt trang ⇒ 2 trang ⇒ XANH, trong khi `scripts/xuat_bao_cao_pdf.py` ghi ra `BAO-CAO.pdf` ở 8 pt + ép ngắt trang ⇒ **3 trang**. Người chấm mở tệp 3 trang trong lúc bộ test báo đạt — cổng nghiệm thu nói dối đúng về tiêu chí dễ kiểm nhất của đề. Nay ba tham số dàn trang là hằng số dùng chung ở `bo_do/xuat_pdf.py`, và `TC-NOP-16` mở thẳng `BAO-CAO.pdf` trong repo để đếm trang + đối chiếu với bản render hiện tại (tệp cũ ⇒ ĐỎ). Phụ: bảng dài bị `KeepTogether` đẩy nguyên sang trang sau, bỏ hoang ~19 dòng cuối trang 1 | soát lại bài nộp theo đề |
 
 BD-01 → BD-03 cộng lại đưa accuracy đo được từ 32,4 % lên 41,9 %. **Gần một phần
 tư "lỗi của model" ban đầu thật ra là lỗi của người đo.**
